@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Sésamath - Authentification</title>
+<link rel="stylesheet" type="text/css" href="https://ssl.sesamath.net/sesamath/_tmp/css_style_authentification_1765355123.css">
+<style>
+#f_identification label.tab{width:9em}
+#f_identification div.sanslabel{margin-left:10em}
+#f_newpass label.tab{width:10em}
+#f_newpass div.sanslabel{margin-left:11em}
+#f_newpass {display:none}
+span.voir_mdp:hover{cursor:pointer}
+</style>
+</head>
+<body>
+    <div id="cadre_milieu">
+
+        <div id="ligne_logo" class="hc"><img alt="Sésamath" src="../img/logo/Association.png"><img alt="Sésamath" src="../img/logo/ManuelsCahiers.png"></div>
+        <hr>
+
+        <form method="post" id="f_identification">
+            <input type="hidden" name="f_autofocus" value="">
+            <h1>S'identifier : professeur (compte valide)</h1>
+            <div class="b info">Identification requise pour accéder à la page demandée.</div>
+            <hr>
+            <div><label class="tab" for="f_login">Nom d’utilisateur</label>
+                <input tabindex="1" id="f_login" name="f_login" size="20" type="text"  autocomplete="off" value="">
+            </div>
+            <div><label class="tab" for="f_password">Mot de passe</label>
+                <input tabindex="2" id="f_password" name="f_password" size="20" type="password"  autocomplete="off" value="">
+                <span class="voir_mdp" title="Laisser appuyé pour divulguer le mot de passe.">&#128064;</span>
+            </div>
+            <div class="sanslabel"><label class="radio" for="f_memoire">
+                    <input tabindex="3" id="f_memoire" name="f_memoire" type="checkbox" value="1"> retenir le nom d’utilisateur</label>
+            </div>
+            <div class="sanslabel">
+                <input id="f_domaine" name="f_domaine" type="hidden" value="manuel.sesamath.net">
+                <input id="f_profil" name="f_profil" type="hidden" value="Prof">
+                <button id="f_submit1" type="submit" tabindex="4"><span class="action valider_identifiants">Valider &amp; poursuivre.</span></button><label  id="ajax_alerte1" for="f_submit1"></label>
+            </div>
+            <hr>
+            <div class="sanslabel"><span class="a action demander_mdp" id="affich_form2">Identifiants oubliés.</span>
+                <input id="url_deconnexion" name="url_deconnexion" type="hidden" value="https://manuel.sesamath.net/send_file.php?file=/files/mstsspe_2020/mstsspe_2020_livreduprof_chap06.doc&amp;sso_deconnexion_locale">
+            </div>
+            <div class="sanslabel"><a href="./prof_inscription.php"><span class="action sinscrire">Nouvelle inscription.</span></a></div>
+        </form>
+
+        <form action="" method="post" id="f_newpass">
+            <h1>Identifiants oubliés</h1>
+            <div>
+                On s’identifie en entrant le nom d’utilisateur et le mot de passe choisis lors de l’inscription.<br>
+                <span class="b">Attention :</span> il faut respecter la distinction majuscules / minuscules du mot de passe.<br>
+                Votre mot de passe, crypté, ne peut pas vous être renvoyé en cas d’oubli.
+            </div>
+            <p>Pour obtenir de nouveaux identifiants, indiquez votre adresse e-mail (<b>officielle</b> si vous en aviez aussi indiqué une personnelle) :</p>
+            <div id="box_adresse" class="box">
+                <div><label class="tab" for="f_mail_acad">Adresse de courriel</label><input tabindex="5" id="f_mail_acad" name="f_mail_acad" size="50" type="text" value=""></div>
+                <div class="sanslabel"><input id="f_profil_type_attendu" name="f_profil_type_attendu" type="hidden" value="Prof"><button id="f_submit2" type="submit" tabindex="6"><span class="action mail_envoyer">Envoyer la demande.</span></button><label id="ajax_alerte2" for="f_submit2">&nbsp;</label></div>
+            </div>
+            <div id="box_confirm" class="box hide">
+                <label id="ajax_confirm" class="valide"></label>
+            </div>
+            <p class="info">Des informations concernant votre connexion seront transmises afin d’analyser tout abus.</p>
+            <hr>
+            <div class="sanslabel"><span id="affich_form1" class="a action retourner">Formulaire d’identification.</span></div>
+        </form>
+
+    </div>
+    <script>
+window.PAGE = "identification";
+</script>
+<script src="../js_vendor/jquery_authentification.js"></script>
+<script src="https://ssl.sesamath.net/sesamath/_tmp/js_script_authentification_1765355125.js"></script>
+<script src="https://ssl.sesamath.net/sesamath/_tmp/identification_1765355125.js"></script>
+</body>
+</html>
