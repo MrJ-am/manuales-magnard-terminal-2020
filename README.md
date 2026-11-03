@@ -1,6 +1,6 @@
-# Manuales Magnard de Terminale (2020) — recursos descargables
-
 > Fuente: contenido recopilado y traducido de la [página de descargas de Sésamath para los manuales Magnard de Terminale de 2020](https://manuel.sesamath.net/index.php?page=telechargement_tle_2020).
+
+# Manuales Magnard de Terminale (2020) — recursos descargables
 
 > Los enlaces externos abren los archivos que siguen disponibles públicamente en Sésamath. Los demás apuntan a las copias locales incluidas en esta carpeta.
 
